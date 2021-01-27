@@ -53,10 +53,10 @@ export default {
 
   data() {
     return {
-      days: localStorage.getItem("days")?localStorage.getItem("days"):14,
-      hours: localStorage.getItem("hours")?localStorage.getItem("hours"):0,
-      mins: localStorage.getItem("mins")?localStorage.getItem("mins"):0,
-      seconds: localStorage.getItem("seconds")?localStorage.getItem("seconds"):0,
+      days: 27,
+      hours: 0,
+      mins: 0,
+      seconds: 0,
     };
   },
 
@@ -180,10 +180,10 @@ export default {
         this.launchTimerDown(--this.seconds,'.seconds');
       }
 
-      localStorage.setItem("days",this.days)
-      localStorage.setItem("hours",this.hours)
-      localStorage.setItem("mins",this.mins)
-      localStorage.setItem("seconds",this.seconds)
+      // localStorage.setItem("days",this.days)
+      // localStorage.setItem("hours",this.hours)
+      // localStorage.setItem("mins",this.mins)
+      // localStorage.setItem("seconds",this.seconds)
 
     }, 1000);
     //== end ==//

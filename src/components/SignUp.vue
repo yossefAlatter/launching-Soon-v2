@@ -84,7 +84,7 @@ export default {
 //== style of sign-btn ==//
 //== start ==//
 .sign-btn{
-    background-color: #57C57F;
+    background-color: var(--natureColor);
     color: white;
     padding: 15px;
     width: 130px;
