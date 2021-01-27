@@ -86,7 +86,9 @@ export default {
   width: 130px;
   border-radius: 10px;
   font-weight: 700;
-  
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
   &:hover{
     transition: 0.3s;
     opacity: 0.8;
@@ -108,7 +110,7 @@ export default {
   padding-left: 130px;
   height: 100%;
   position: relative;
-  z-index: 999;
+  z-index: 997;
 }
 //== end ==//
 
