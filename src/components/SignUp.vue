@@ -51,6 +51,11 @@ export default {
     max-width: 100%;  
     }
 }
+
+}
+@media screen and (max-width: 360px) {
+    #sign-up{
+    margin-top: 0px;}
 }
 //== end ==//
 

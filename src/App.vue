@@ -1,5 +1,12 @@
 <template>
   <div id="app">
+    <!-- sign-btns -->
+    <!-- start -->
+    <div class="btns-con">
+      <button class="btn-login ">Log in</button>
+      <button class="btn-signup ">Sign Up</button>
+    </div>
+    <!-- end -->
 
     <!-- AppBg -->
     <my-bg-app />
@@ -58,6 +65,40 @@ export default {
   position: relative;
   height: 100vh;
   padding: 20px
+}
+//== end ==//
+
+//== sign btns style ==//
+//== start ==//
+.btns-con{
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 999;
+  padding-top: 20px;
+  padding-right: 20px;
+  margin-bottom: 20px;
+}
+.btn-login , .btn-signup{
+  border: none;
+  outline: none;
+  padding: 15px;
+  width: 130px;
+  border-radius: 10px;
+  font-weight: 700;
+  
+  &:hover{
+    transition: 0.3s;
+    opacity: 0.8;
+  }
+}
+.btn-login{
+  background-color: transparent;
+  color:var(--natureColor);
+}
+.btn-signup{
+  background-color: var(--natureColor);
+  color: white;
 }
 //== end ==//
 
