@@ -98,8 +98,12 @@ export default {
 
 //== bg media ==//
 //== start ==//
-
-@for $i from 1540 through 1000 {
+@media screen and (max-width: 1150px) {
+    .ly3{
+        display: none;
+    }
+}
+@for $i from 1540 through 200 {
   @media screen and (max-width:#{$i}px) {
     .ly2{
       $i: 500 * ($i/1540);
