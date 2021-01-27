@@ -1,0 +1,36 @@
+//== reset style for all elements ==//
+//== start ==//
+*{
+    box-sizing: border-box;
+}
+//== end ==//
+
+//== declare color variables in root ==//
+//== start ==//
+:root{
+    --mainColor: #254B2F;
+    --subColor: #77A290;
+    --natureColor: #57C57F;
+    --whiteColor: #ffffff;
+    --bgColor: #DCFEEC;
+}
+//== end ==//
+
+//== control font of the body ==//
+//== start ==//
+body{
+    font-size: 14px;
+}
+//== end ==//
+
+//////////////////////
+.num{
+    width: 100%;
+    height: 1px;
+    background-color: var(--bgColor);
+    position: absolute;
+    top: 50%;
+    transform-origin: center;
+    z-index: -1;
+    
+}

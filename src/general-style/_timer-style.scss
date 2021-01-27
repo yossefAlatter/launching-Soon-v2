@@ -1,0 +1,156 @@
+//== timer counter style ==//
+//== start ==//
+.counter-con{
+    width: 151px;
+    height: 144px;
+    margin: 0  auto;
+    position: relative;
+    perspective: 1000px;
+    border-radius: 8px;
+    &:hover{
+        .parent{
+            transition: all 1s;
+            transform: rotate3d(1, 0, 0, -180deg);
+        }
+    }
+    .parent{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        height: 50%;
+        width: 100%;
+        transform-origin: bottom;
+        transform-style: preserve-3d;
+    }
+}
+//== end ==//
+
+//== cover of head of container ==//
+//== start ==//
+.cover{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--natureColor);
+    opacity: 0.2;
+    z-index: 999;
+}
+//== end ==//
+
+//== style of layers in timer container ==//
+//== start ==//
+@for $i from 1 through 4 {
+    .layer#{$i}{
+        width: 100%;
+        overflow: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        background-color: white;
+        position: absolute;
+        left: 0;
+        @if $i == 1 {
+            height: 100%;
+            border-radius: 0 0 8px 8px;
+            transform: rotate3d(1, 0, 0, -180deg);
+            z-index: 1;
+        }
+        @if $i == 2 {
+            height: 100%;
+            border-radius: 8px 8px 0 0 ;
+            z-index: 1;
+        }
+        @if $i == 3 {
+            height: 50%;
+            border-radius: 8px 8px 0 0 ;
+        }
+        @if $i == 4  {
+            border-radius: 0 0 8px 8px;
+            height: 50%;
+            bottom: 0;
+        }@else{
+            top: 0;
+        }
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            
+            border-radius: 50%;
+            @if $i == 1  {
+                transform: translate(-50%,-50%);
+                top: 0;
+            }
+            @if $i == 2 {
+                transform: translate(-50%,50%);
+                bottom: 0;
+            }
+            @if $i == 3  {
+                transform: translate(-50%,50%);
+                bottom: 0;
+            }
+            @if $i == 4 {
+                transform: translate(-50%,-50%);
+                top: 0;
+            }
+            background-color: var(--natureColor);
+            width: 14px;
+            height: 14px;
+        }
+        &::before{
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            border-radius: 50%;
+            @if $i == 1  {
+                transform: translate(50%,-50%);
+                top: 0;
+            }
+            @if $i == 2 {
+                transform: translate(50%,50%);
+                bottom: 0;
+            }
+            @if $i == 3  {
+                transform: translate(50%,50%);
+                bottom: 0;
+            }
+            @if $i == 4 {
+                transform: translate(50%,-50%);
+                top: 0;
+            }
+            background-color: var(--natureColor);
+            width: 14px;
+            height: 14px;
+        }
+        .num#{$i}{
+            color: var(--mainColor);
+            font-size: 6em;
+            position: absolute;
+            @if $i == 1 {
+                bottom: 100%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+            @if $i == 2 {
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @if $i == 3 {
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            @if $i == 4 {
+                bottom: 100%;
+                left: 50%;
+                transform: translate(-50%, 50%);
+            }
+        }
+    }
+}
+//== end ==//
