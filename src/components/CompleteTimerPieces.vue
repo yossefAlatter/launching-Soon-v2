@@ -53,10 +53,10 @@ export default {
 
   data() {
     return {
-      days: localStorage.getItem("days")?localStorage.getItem("days"):8,
-      hours: localStorage.getItem("hours")?localStorage.getItem("hours"):23,
-      mins: localStorage.getItem("mins")?localStorage.getItem("mins"):55,
-      seconds: localStorage.getItem("seconds")?localStorage.getItem("seconds"):41,
+      days: localStorage.getItem("days")?localStorage.getItem("days"):14,
+      hours: localStorage.getItem("hours")?localStorage.getItem("hours"):0,
+      mins: localStorage.getItem("mins")?localStorage.getItem("mins"):0,
+      seconds: localStorage.getItem("seconds")?localStorage.getItem("seconds"):0,
     };
   },
 
