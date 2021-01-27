@@ -42,6 +42,7 @@ export default {
     color: var(--mainColor);
     font-weight: 700;
     font-size: 4.2em;
+    margin-right: auto !important;
     margin-bottom: 25px;
     cursor: default;
     width: fit-content;
@@ -52,6 +53,46 @@ export default {
 }
 //== end ==//
 
+//== heading media ==//
+//== start ==//
+@media screen and (max-width: 620px){
+    .heading{
+        font-size: 4em;
+    }
+}
+@media screen and (max-width: 550px){
+    .heading{
+        font-size: 3.6em;
+    }
+}
+@media screen and (max-width: 500px){
+    .heading{
+        font-size: 3.2em;
+    }
+}
+@media screen and (max-width: 450px){
+    .heading{
+        font-size: 2.8em;
+    }
+}
+@media screen and (max-width: 400px){
+    .heading{
+        font-size: 2.4em;
+    }
+}
+@media screen and (max-width: 350px){
+    .heading{
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 300px){
+    .heading{
+        font-size: 1.8em;
+    }
+}
+//== end ==//
+
+
 //== sub-text-style ==//
 //== start ==//
 .sub-text{
@@ -61,6 +102,21 @@ export default {
     max-width: 651px;
     margin-bottom: 25px;
     cursor: default;
+}
+//== end ==//
+
+//== subtext media ==//
+//== start ==//
+
+@media screen and (max-width: 450px){
+    .sub-text{
+        font-size: 1.2em;
+    }
+}
+@media screen and (max-width: 350px){
+    .sub-text{
+        font-size: 0.9em;
+    }
 }
 //== end ==//
 
